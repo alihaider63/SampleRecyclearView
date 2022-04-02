@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.24074074074074073" />
+        <entry key="app/src/main/res/drawable-v24/backgroundoflayout.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable-v24/backgroundshape.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable-v24/button.xml" value="0.23425925925925925" />
+        <entry key="app/src/main/res/drawable-v24/button2.xml" value="0.9" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_background.xml" value="0.129" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.149" />
+        <entry key="app/src/main/res/drawable-v24/viewbackground.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/backgroundoflayout.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/backgroundshape.xml" value="0.21963470319634704" />
+        <entry key="app/src/main/res/drawable/deletebutton.xml" value="0.23425925925925925" />
+        <entry key="app/src/main/res/drawable/flashcard_count_bg.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/flashcard_count_header_bg.xml" value="0.1305" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.116" />
+        <entry key="app/src/main/res/drawable/main_layout.xml" value="0.13792944335937493" />
+        <entry key="app/src/main/res/drawable/sub_layout.xml" value="0.129" />
+        <entry key="app/src/main/res/drawable/viewbackground.xml" value="0.5881484985351563" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_pagerview.xml" value="0.1923899102180419" />
+        <entry key="app/src/main/res/layout/activity_second.xml" value="0.234375" />
+        <entry key="app/src/main/res/layout/activity_show_image_on_full_screen.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/card_view copy.xml" value="0.6120658754308099" />
+        <entry key="app/src/main/res/layout/card_view.xml" value="0.7280701754385965" />
+        <entry key="app/src/main/res/layout/checker.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/demo.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/demo_layout.xml" value="0.1923899102180419" />
+        <entry key="app/src/main/res/layout/dialogview.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/flash_card.xml" value="0.7189241762514467" />
+        <entry key="app/src/main/res/layout/fragment_calls.xml" value="0.1923899102180419" />
+        <entry key="app/src/main/res/layout/fragment_chats.xml" value="0.1923899102180419" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.1923899102180419" />
+        <entry key="app/src/main/res/layout/fragment_status.xml" value="0.1923899102180419" />
+        <entry key="app/src/main/res/layout/item_view.xml" value="0.26528942871093747" />
+        <entry key="app/src/main/res/layout/item_view_newsly.xml" value="0.1923899102180419" />
+        <entry key="app/src/main/res/layout/main_activity2.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/main_activity_fragment.xml" value="0.1923899102180419" />
+        <entry key="app/src/main/res/layout/newsly_activity.xml" value="0.1923899102180419" />
+        <entry key="app/src/main/res/layout/newsly_activity_main.xml" value="0.1923899102180419" />
+        <entry key="app/src/main/res/layout/picture_show_on_fullscreen_fragment.xml" value="0.1923899102180419" />
+        <entry key="app/src/main/res/layout/relative_layout.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/second_activity_fragment.xml" value="0.2493499755859374" />
+        <entry key="app/src/main/res/layout/settings_layout.xml" value="0.22086568054092326" />
+        <entry key="app/src/main/res/layout/simple_activity.xml" value="0.20833333333333334" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.116" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+        <entry key="app/src/main/res/xml/fileprovider.xml" value="0.13518518518518519" />
+        <entry key="app/src/main/res/xml/network_security_config.xml" value="0.16973065412569474" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

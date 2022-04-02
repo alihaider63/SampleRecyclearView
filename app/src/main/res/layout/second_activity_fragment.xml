@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/second_activity_fragment"
+    android:background="@color/background_of_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <View
+        android:id="@+id/appBarView"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="13dp"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="@+id/appBarView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/screenTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vlinder"
+        android:textSize="20sp"
+        android:textColor="@color/main_text_color"
+        app:layout_constraintBottom_toBottomOf="@+id/appBarView"
+        app:layout_constraintEnd_toStartOf="@+id/hamburger"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/hamburger"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="13dp"
+        android:src="@drawable/menu"
+        app:layout_constraintBottom_toBottomOf="@+id/appBarView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/backgroundoflayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarView">
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/viewbackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titleOfButterfly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/koninginnenpage"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@id/view2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/familyOfButterfly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/papilio_machaon"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@id/view2"
+            app:layout_constraintStart_toEndOf="@+id/titleOfButterfly"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageOfButterfly"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="12dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/butterfly7"
+            app:layout_constraintDimensionRatio="12:11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view2">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/vleugellengte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="@string/vleugellengte"
+            android:textColor="@color/main_text_color"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/imageOfButterfly"
+            app:layout_constraintTop_toBottomOf="@+id/imageOfButterfly" />
+
+        <TextView
+            android:id="@+id/voorkomen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/voorkomen"
+            android:textColor="@color/main_text_color"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/imageOfButterfly"
+            app:layout_constraintTop_toBottomOf="@+id/vleugellengte" />
+
+        <TextView
+            android:id="@+id/size_of_butterfly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/size_of_butterfly"
+            android:textColor="@color/lite_text_color"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/vleugellengte" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/paragraph"
+            android:textColor="@color/lite_text_color"
+            android:textSize="16sp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/vleugellengte"
+            app:layout_constraintTop_toTopOf="@+id/voorkomen" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

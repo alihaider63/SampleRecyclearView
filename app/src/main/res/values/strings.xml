@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">Vlinders met vakantie</string>
+    <string name="vlinder">Vlinders met vakantie</string>
+    <string name="dikkopjes">Dikkopjes:</string>
+    <string name="zwart">Zwartsprietdikkopje</string>
+    <string name="Thym">(Thymelicus lineola)</string>
+    <string name="search_bar_hint">To</string>
+    <string name="subject">Subject</string>
+    <string name="message">Message</string>
+    <string name="send">Send</string>
+    <string name="herken_de_vlinder">Herken de vlinder</string>
+    <string name="vlinderkleur">Vlinderkleur:</string>
+    <string name="oranje">Oranje</string>
+    <string name="argusvlinder">Argusvlinder</string>
+    <string name="lasiommata_megera">(Lasiommata megera)</string>
+    <string name="bont_zandoogje">Bont Zandoogje</string>
+    <string name="pararge_aegeria">(Pararge aegeria)</string>
+    <string name="bruin_zandoogje">Bruin Zandoogje</string>
+    <string name="maniola_jurtina">(Maniola jurtina)</string>
+    <string name="distelvlinder">Distelvlinder</string>
+    <string name="vanessa_cardui">(Vanessa cardui)</string>
+    <string name="vlinders_met_vakantie">Vlinders met vakantie</string>
+    <string name="thymelicus_lineola">(Thymelicus lineola)</string>
+    <string name="bretons">Bretons spikkeldikkopje</string>
+    <string name="pyrgus_arm">(Pyrgus armoricanus)</string>
+    <string name="aardbeivlinder">Aardbeivlinder</string>
+    <string name="pyrgus_malvae">(Pyrgus malvae)</string>
+    <string name="grote_pages">Grote pages:</string>
+    <string name="koninginnenpage">Koninginnenpage</string>
+    <string name="papilio_machaon">(Papilio machaon)</string>
+    <string name="telling_opslaan">Telling opslaan</string>
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="Delete">Delete</string>
+    <string name="delete">Are you sure to delete Item?</string>
+    <string name="add_item">Butterfly Name</string>
+    <string name="family">Butterfly Family</string>
+    <string name="clickImage">Click Image</string>
+    <string name="vleugellengte">Vleugellengte:</string>
+    <string name="voorkomen">Voorkomen:</string>
+    <string name="size_of_butterfly">32-39 mm</string>
+    <string name="paragraph">Is weing in Nederland te zien, maar naar het zuiden toe en in Belgie
+    steeds algemener, vooral op heuvelachtige plaatsen.</string>
+    <string name="app_settings">App Settings</string>
+    <string name="tone_detection">Tone Detection</string>
+    <string name="auto_correction">Auto-correction</string>
+    <string name="auto_capitalization">Auto-capitalization</string>
+    <string name="swipe_to_type">Swipe to Type</string>
+    <string name="predictive_text">Predictive Text</string>
+    <string name="suggest_emojis">Suggest Emojis</string>
+    <string name="synonyms">Synonyms</string>
+    <string name="show_synonyms_after_delay">Show Synonyms After Delay</string>
+    <string name="double_space_period">Double-space period</string>
+    <string name="Suggest_contact_names">Suggest contact names</string>
+    <string name="language_preference">Language Preference</string>
+    <string name="manage_personal_dictionary">Manage Personal Dictionary</string>
+    <string name="tap_the_keyword">Tap the keyword\'s G icon to see tones. Tone detection requires
+    90+ characters to work.</string>
+    <string name="tapping_spacebar">Tapping spacebar or a punctuation mark automatically corrects
+    mistyped words.</string>
+    <string name="capitalize">Capitalize the first word of each sentence.</string>
+    <string name="double_tapping">Double-tapping spacebar inserts a period followed by a space.
+    </string>
+    <string name="use_names">Use names from Contacts for suggestions.</string>
+    <string name="american_english">American English</string>
+    <string name="chats_fragment">Chats Fragment</string>
+    <string name="profile_fragment">Profile Fragment</string>
+    <string name="status_fragment">Status Fragment</string>
+    <string name="calls_fragment">Calls Fragment</string>
+</resources>
