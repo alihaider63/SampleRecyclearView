@@ -1,121 +1,89 @@
 package com.example.samplerecyclearview.adapters
 
-import android.graphics.Bitmap
+import android.annotation.SuppressLint
 import android.graphics.BitmapFactory
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.samplerecyclearview.models.Butterfly
-import com.example.samplerecyclearview.interfaces.MyInterface
-import com.example.samplerecyclearview.R
+import com.example.samplerecyclearview.interfaces.ButterflyInterface
+import com.example.samplerecyclearview.databinding.ItemViewBinding
+
 class ButterflyAdapter(
-    private var butterfliesList: ArrayList<Butterfly>,
-    private val myInterface: MyInterface
+    private val butterflies: ArrayList<Butterfly>,
+    private val butterflyInterface: ButterflyInterface
     )
     : RecyclerView.Adapter<ButterflyAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val inflater = LayoutInflater.from(parent.context)
-        val view = inflater.inflate(R.layout.item_view, parent, false)
-        return MyViewHolder(view)
+        val binding = ItemViewBinding.inflate(LayoutInflater.from(parent.context), parent , false)
+        return MyViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.bind(butterfliesList, position, this, myInterface)
+        holder.bind(butterflies[position], position)
     }
 
     override fun getItemCount(): Int {
-        return butterfliesList.size
+        return butterflies.size
     }
 
-    fun addItem(butterfly: Butterfly) {
-        butterfliesList.add(butterfly)
-        notifyItemInserted(butterfliesList.size - 1)
+    fun addButterfly(butterfly: Butterfly) {
+        butterflies.add(butterfly)
+        notifyItemInserted(butterflies.size - 1)
     }
 
-    class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        var butterflyImageView: ImageView? = itemView.findViewById<ImageView>(R.id.butterfly)
-        var butterflyName: TextView? = itemView.findViewById<TextView>(R.id.butterflyName)
-        var butterflyFamily: TextView? = itemView.findViewById<TextView>(R.id.butterflyFamily)
-        var minusBtn: Button? = itemView.findViewById(R.id.minusBtn)
-        var plusBtn: Button? = itemView.findViewById(R.id.plusBtn)
-        var counter: TextView? = itemView.findViewById(R.id.counter)
-        var deleteBtn: Button? = itemView.findViewById(R.id.delete_Item_Btn)
-        var forwardBtn: ImageView? = itemView.findViewById(R.id.forward_ic)
+    inner class MyViewHolder(binding: ItemViewBinding): RecyclerView.ViewHolder(binding.root) {
 
+        private val butterflyImageView: ImageView = binding.butterflyImageView
+        private val butterflyName = binding.butterflyName
+        private val butterflyFamily = binding.butterflyFamily
+        private val minusBtn = binding.minusBtn
+        private val plusBtn = binding.plusBtn
+        private val counter = binding.counter
 
-        fun bind(butterfliesList: ArrayList<Butterfly>,
-                 position: Int, butterflyAdapter: ButterflyAdapter,
-                 myInterface: MyInterface
-        ) {
-            butterflyImageView?.let { butterflyImageView ->
-                if (butterfliesList[position].butterfly != null &&
-                    butterfliesList[position].image == null) {
-                    butterfliesList[position].butterfly?.let {
-                        butterflyImageView.setImageResource(
-                            it
-                        )
-                    }
-                } else if (butterfliesList[position].image != null &&
-                        butterfliesList[position].butterfly == null){
-                    butterfliesList[position].image?.let {
-                        butterflyImageView.setImageBitmap(it)
-                    }
-                } else {
-                    val imageTaken: Bitmap? = BitmapFactory.decodeFile(butterfliesList[position].imagePath)
-                    imageTaken?.let {
-                        butterflyImageView.setImageBitmap(imageTaken)
-                    }
+        @SuppressLint("ResourceType")
+        fun bind(butterfly: Butterfly, position: Int) {
+
+            when {
+                butterfly.imageRes != null -> butterflyImageView.setImageResource(butterfly.imageRes)
+                butterfly.imageBitmap != null -> butterflyImageView.setImageBitmap(butterfly.imageBitmap)
+                else -> {
+                    val imageBitmap=BitmapFactory.decodeFile(butterfly.imagePath)
+                    butterflyImageView.setImageBitmap(imageBitmap)
                 }
             }
 
-            butterflyName?.let {
-                it.text = butterfliesList[position].name
+            butterflyName.text = butterfly.butterflyName
+
+            butterflyFamily.text = butterfly.family
+
+            butterflyImageView.setOnClickListener {
+                butterflyInterface.onImageClicked(butterfly)
             }
 
-            butterflyFamily?.let {
-                it.text = butterfliesList[position].family
+            counter.text = butterfly.count.toString()
+
+            minusBtn.setOnClickListener {
+                butterfly.count -= 1
+                counter.text = (butterfly.count).toString()
             }
 
-            butterflyImageView?.let {
-                it.setOnClickListener {
-                        myInterface.onButterClicked(position, butterfliesList)
-                }
+            plusBtn.setOnClickListener {
+                butterfly.count += 1
+                counter.text = (butterfly.count).toString()
             }
-            counter?.let {
-                it.text = "${butterfliesList[position].count}"
-//                it.text = (butterfliesList[position].count).toString()
 
+            itemView.setOnClickListener {
+                butterflyInterface.onForwardIconPressed(butterfly)
             }
-            minusBtn?.let {
-                it.setOnClickListener {
-//                    butterfliesList[position].count -= 1
-//                    myAdapter.notifyItemChanged(position)
-                    butterfliesList[position].count -= 1
-                    counter?.text = (butterfliesList[position].count).toString()
-                }
-            }
-            plusBtn?.let {
-                it.setOnClickListener {
-                    //butterfliesList[position].count += 1
-                    //myAdapter.notifyItemChanged(position)
-                    butterfliesList[position].count += 1
-                    counter?.text = (butterfliesList[position].count).toString()
-                }
-            }
-            deleteBtn?.let {
-                it.setOnClickListener {
-                    butterfliesList.removeAt(position)
-                    butterflyAdapter.notifyItemRemoved(position)
-                    butterflyAdapter.notifyItemRangeChanged(position, butterfliesList.size)
-                }
-            }
-            forwardBtn?.setOnClickListener {
-                myInterface.onForwardPressed(position, butterfliesList)
+
+            itemView.setOnLongClickListener {
+                butterflies.removeAt(position)
+                notifyItemRemoved(position)
+                notifyItemRangeChanged(position, butterflies.size)
+                true
             }
         }
     }

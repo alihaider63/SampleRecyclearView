@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_activity_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/main_activity_fragment"
     android:background="@color/background_of_layout">
 
     <View
-        android:id="@+id/app_bar_view"
+        android:id="@+id/actionBar"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:background="@color/white"
@@ -15,48 +15,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/back"
-        android:layout_width="18dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="13dp"
-        android:src="@drawable/back2"
-        app:layout_constraintBottom_toBottomOf="@+id/app_bar_view"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/screen_title"
+        android:id="@+id/screenTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/vlinder"
-        android:textSize="22sp"
         android:textColor="@color/text_colour"
-        app:layout_constraintBottom_toBottomOf="@+id/app_bar_view"
-        app:layout_constraintEnd_toStartOf="@+id/settingsButton"
-        app:layout_constraintStart_toEndOf="@+id/back"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/actionBar"
+        app:layout_constraintEnd_toStartOf="@+id/hamburgerIcon"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/settingsButton"
+        android:id="@+id/hamburgerIcon"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginEnd="13dp"
         android:src="@drawable/hameburger"
-        app:layout_constraintBottom_toBottomOf="@+id/app_bar_view"
+        app:layout_constraintBottom_toBottomOf="@+id/actionBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listOfButterfly"
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:background="@color/white"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/addNewItem"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_bar_view">
-
+        app:layout_constraintTop_toBottomOf="@+id/actionBar">
 
     </androidx.recyclerview.widget.RecyclerView>
 

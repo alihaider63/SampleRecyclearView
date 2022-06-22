@@ -3,25 +3,25 @@ package com.example.samplerecyclearview.activities
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SwitchCompat
-import com.example.samplerecyclearview.databinding.SettingsLayoutBinding
+import com.example.samplerecyclearview.databinding.ActivitySettingsBinding
 
-class SettingsActivity: AppCompatActivity() {
+class SettingsActivity : AppCompatActivity() {
 
     companion object {
-        const val SHAREDPREF = "sharedPreferences"
-        const val TONEDETECTION = "toneDetection"
+        const val SHARED_PREF = "sharedPreferences"
+        const val TONE_DETECTION = "toneDetection"
         const val AUTOCORRECTION = "autoCorrection"
-        const val AUTOCAPITALIZATION = "autoCapitalization"
+        const val AUTO_CAPITALIZATION = "autoCapitalization"
         const val SWIPE = "swipe"
         const val PREDICTIVE = "predictive"
-        const val SUGGESTEMOJIS = "suggestEmojis"
+        const val SUGGEST_EMOJIS = "suggestEmojis"
         const val SYNONYMS = "synonyms"
-        const val SHOWSYNONYMS = "showSynonyms"
-        const val DOUBLESPACEPERIOD = "DoubleSpacePeriod"
-        const val SUGGESTCONTACTSNAMES = "suggestContactsNames"
+        const val SHOW_SYNONYMS = "showSynonyms"
+        const val DOUBLE_SPACE_PERIOD = "DoubleSpacePeriod"
+        const val SUGGEST_CONTACTS_NAMES = "suggestContactsNames"
     }
 
-    private lateinit var binding: SettingsLayoutBinding
+    private lateinit var binding: ActivitySettingsBinding
     private lateinit var switchOfToneDetection: SwitchCompat
     private lateinit var switchOfAutoCorrection: SwitchCompat
     private lateinit var switchOfAutoCapitalize: SwitchCompat
@@ -35,7 +35,7 @@ class SettingsActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = SettingsLayoutBinding.inflate(layoutInflater)
+        binding = ActivitySettingsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
@@ -81,35 +81,44 @@ class SettingsActivity: AppCompatActivity() {
         switchOfSuggestContactNames.setOnClickListener {
             saveData()
         }
+
+        binding.back.setOnClickListener {
+            onBackPressed()
+        }
+
     }
+
     private fun saveData() {
-        val sharedPref = getSharedPreferences(SHAREDPREF, MODE_PRIVATE)
+        val sharedPref = getSharedPreferences(SHARED_PREF, MODE_PRIVATE)
         val editor = sharedPref.edit()
         editor.apply {
-            putBoolean(TONEDETECTION, switchOfToneDetection.isChecked)
+            putBoolean(TONE_DETECTION, switchOfToneDetection.isChecked)
             putBoolean(AUTOCORRECTION, switchOfAutoCorrection.isChecked)
-            putBoolean(AUTOCAPITALIZATION, switchOfAutoCapitalize.isChecked)
+            putBoolean(AUTO_CAPITALIZATION, switchOfAutoCapitalize.isChecked)
             putBoolean(SWIPE, switchOfSwipe.isChecked)
             putBoolean(PREDICTIVE, switchOfPredictive.isChecked)
-            putBoolean(SUGGESTEMOJIS, switchOfSuggestEmojis.isChecked)
+            putBoolean(SUGGEST_EMOJIS, switchOfSuggestEmojis.isChecked)
             putBoolean(SYNONYMS, switchOfSynonyms.isChecked)
-            putBoolean(SHOWSYNONYMS, switchOfShowSynonymsAfterDelay.isChecked)
-            putBoolean(DOUBLESPACEPERIOD, switchOfDoubleSpacePeriod.isChecked)
-            putBoolean(SUGGESTCONTACTSNAMES, switchOfSuggestContactNames.isChecked)
+            putBoolean(SHOW_SYNONYMS, switchOfShowSynonymsAfterDelay.isChecked)
+            putBoolean(DOUBLE_SPACE_PERIOD, switchOfDoubleSpacePeriod.isChecked)
+            putBoolean(SUGGEST_CONTACTS_NAMES, switchOfSuggestContactNames.isChecked)
         }
             .apply()
     }
+
     private fun loadData() {
-        val sharedPref = getSharedPreferences(SHAREDPREF, MODE_PRIVATE)
-        switchOfToneDetection.isChecked = sharedPref.getBoolean(TONEDETECTION, false)
+        val sharedPref = getSharedPreferences(SHARED_PREF, MODE_PRIVATE)
+        switchOfToneDetection.isChecked = sharedPref.getBoolean(TONE_DETECTION, false)
         switchOfAutoCorrection.isChecked = sharedPref.getBoolean(AUTOCORRECTION, false)
-        switchOfAutoCapitalize.isChecked = sharedPref.getBoolean(AUTOCAPITALIZATION, false)
+        switchOfAutoCapitalize.isChecked = sharedPref.getBoolean(AUTO_CAPITALIZATION, false)
         switchOfSwipe.isChecked = sharedPref.getBoolean(SWIPE, false)
-        switchOfPredictive.isChecked = sharedPref.getBoolean(PREDICTIVE,false)
-        switchOfSuggestEmojis.isChecked = sharedPref.getBoolean(SUGGESTEMOJIS, false)
+        switchOfPredictive.isChecked = sharedPref.getBoolean(PREDICTIVE, false)
+        switchOfSuggestEmojis.isChecked = sharedPref.getBoolean(SUGGEST_EMOJIS, false)
         switchOfSynonyms.isChecked = sharedPref.getBoolean(SYNONYMS, false)
-        switchOfShowSynonymsAfterDelay.isChecked = sharedPref.getBoolean(SHOWSYNONYMS, false)
-        switchOfDoubleSpacePeriod.isChecked = sharedPref.getBoolean(DOUBLESPACEPERIOD, false)
-        switchOfSuggestContactNames.isChecked = sharedPref.getBoolean(SUGGESTCONTACTSNAMES, false)
+        switchOfShowSynonymsAfterDelay.isChecked = sharedPref.getBoolean(SHOW_SYNONYMS, false)
+        switchOfDoubleSpacePeriod.isChecked = sharedPref.getBoolean(DOUBLE_SPACE_PERIOD, false)
+        switchOfSuggestContactNames.isChecked = sharedPref.getBoolean(SUGGEST_CONTACTS_NAMES, false)
     }
+
+
 }

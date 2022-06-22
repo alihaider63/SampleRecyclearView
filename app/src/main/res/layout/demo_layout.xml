@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/main_activity_fragment"
     android:background="@color/background_of_layout">
 
     <View
-        android:id="@+id/app_bar_view"
+        android:id="@+id/actionBar"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:background="@color/white"
@@ -23,18 +21,18 @@
         android:layout_height="18dp"
         android:layout_marginStart="13dp"
         android:src="@drawable/back2"
-        app:layout_constraintBottom_toBottomOf="@+id/app_bar_view"
+        app:layout_constraintBottom_toBottomOf="@+id/actionBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/screen_title"
+        android:id="@+id/screenTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/vlinder"
-        android:textSize="22sp"
         android:textColor="@color/text_colour"
-        app:layout_constraintBottom_toBottomOf="@+id/app_bar_view"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/actionBar"
         app:layout_constraintEnd_toStartOf="@+id/hamburger"
         app:layout_constraintStart_toEndOf="@+id/back"
         app:layout_constraintTop_toTopOf="parent" />
@@ -45,7 +43,7 @@
         android:layout_height="24dp"
         android:layout_marginEnd="13dp"
         android:src="@drawable/hameburger"
-        app:layout_constraintBottom_toBottomOf="@+id/app_bar_view"
+        app:layout_constraintBottom_toBottomOf="@+id/actionBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,253 +51,248 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/app_bar_view">
+        app:layout_constraintTop_toBottomOf="@id/actionBar">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:id="@+id/tone"
-            android:layout_marginTop="65dp"
-            android:layout_marginEnd="20dp">
-
-            <TextView
-                android:id="@+id/tone_detection"
-                android:layout_width="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tone"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/tone_detection"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="65dp"
+                android:layout_marginEnd="20dp">
 
-            <TextView
-                android:id="@+id/tap_the_keyboard"
-                android:layout_width="285dp"
-                android:layout_height="59dp"
-                android:text="@string/tap_the_keyword"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tone_detection" />
+                <TextView
+                    android:id="@+id/tone_detection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tone_detection"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/switchOfToneDetection"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:checked="true"
-                android:longClickable="false"
-                android:theme="@style/BrandedSwitch2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/tap_the_keyboard" />
+                <TextView
+                    android:id="@+id/tap_the_keyboard"
+                    android:layout_width="285dp"
+                    android:layout_height="59dp"
+                    android:text="@string/tap_the_keyword"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tone_detection" />
 
-            <TextView
-                android:id="@+id/auto"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/auto_correction"
-                android:textColor="@color/black"
-                android:layout_marginTop="50dp"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tap_the_keyboard" />
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchOfToneDetection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:checked="true"
+                    android:longClickable="false"
+                    android:theme="@style/BrandedSwitch2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tap_the_keyboard" />
 
-            <TextView
-                android:id="@+id/tapping"
-                android:layout_width="285dp"
-                android:layout_height="59dp"
-                android:text="@string/tapping_spacebar"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/auto" />
+                <TextView
+                    android:id="@+id/auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/auto_correction"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tap_the_keyboard" />
 
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/switchOfAutoCorrection"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:longClickable="false"
-                android:theme="@style/BrandedSwitch2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/tapping" />
+                <TextView
+                    android:id="@+id/tapping"
+                    android:layout_width="285dp"
+                    android:layout_height="59dp"
+                    android:text="@string/tapping_spacebar"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/auto" />
 
-            <TextView
-                android:id="@+id/autoCapitalization"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/auto_capitalization"
-                android:textColor="@color/black"
-                android:layout_marginTop="50dp"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tapping" />
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchOfAutoCorrection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:longClickable="false"
+                    android:theme="@style/BrandedSwitch2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tapping" />
 
-            <TextView
-                android:id="@+id/capitalization"
-                android:layout_width="285dp"
-                android:layout_height="59dp"
-                android:text="@string/capitalize"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/autoCapitalization" />
+                <TextView
+                    android:id="@+id/autoCapitalization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/auto_capitalization"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tapping" />
 
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/switchOfAutoCapitalize"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:longClickable="false"
-                android:theme="@style/BrandedSwitch2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/capitalization" />
+                <TextView
+                    android:id="@+id/capitalization"
+                    android:layout_width="285dp"
+                    android:layout_height="59dp"
+                    android:text="@string/capitalize"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/autoCapitalization" />
 
-            <TextView
-                android:id="@+id/Swipe"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/swipe_to_type"
-                android:textColor="@color/black"
-                android:layout_marginTop="50dp"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/capitalization" />
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchOfAutoCapitalize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:longClickable="false"
+                    android:theme="@style/BrandedSwitch2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/capitalization" />
 
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/switchOfSwipe"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:longClickable="false"
-                android:theme="@style/BrandedSwitch2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/Swipe" />
+                <TextView
+                    android:id="@+id/Swipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/swipe_to_type"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/capitalization" />
 
-            <TextView
-                android:id="@+id/predictive"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/predictive_text"
-                android:textColor="@color/black"
-                android:layout_marginTop="50dp"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/Swipe" />
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchOfSwipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:longClickable="false"
+                    android:theme="@style/BrandedSwitch2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/Swipe" />
 
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/switchOfPredictive"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:longClickable="false"
-                android:theme="@style/BrandedSwitch2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/predictive" />
+                <TextView
+                    android:id="@+id/predictive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/predictive_text"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Swipe" />
 
-            <TextView
-                android:id="@+id/suggest_Emojis"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/suggest_emojis"
-                android:textColor="@color/black"
-                android:layout_marginTop="50dp"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/predictive" />
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchOfPredictive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:longClickable="false"
+                    android:theme="@style/BrandedSwitch2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/predictive" />
 
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/switchOfSuggestEmojis"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:longClickable="false"
-                android:theme="@style/BrandedSwitch2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/suggest_Emojis" />
+                <TextView
+                    android:id="@+id/suggest_Emojis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/suggest_emojis"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/predictive" />
 
-            <TextView
-                android:id="@+id/synonyms"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/synonyms"
-                android:textColor="@color/black"
-                android:layout_marginTop="50dp"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/suggest_Emojis" />
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchOfSuggestEmojis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:longClickable="false"
+                    android:theme="@style/BrandedSwitch2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/suggest_Emojis" />
 
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/switchOfSynonyms"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:longClickable="false"
-                android:theme="@style/BrandedSwitch2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/synonyms" />
+                <TextView
+                    android:id="@+id/synonyms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/synonyms"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/suggest_Emojis" />
 
-
-            <TextView
-                android:id="@+id/ShowSynonymsAfterDelay"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/show_synonyms_after_delay"
-                android:textColor="@color/black"
-                android:layout_marginTop="50dp"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/synonyms" />
-
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/switchOfShowSynonymsAfterDelay"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:longClickable="false"
-                android:theme="@style/BrandedSwitch2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/ShowSynonymsAfterDelay" />
-
-            <TextView
-                android:id="@+id/DoubleSpacePeriod"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/double_space_period"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:layout_marginTop="50dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ShowSynonymsAfterDelay" />
-
-            <TextView
-                android:id="@+id/DoubleTapping"
-                android:layout_width="285dp"
-                android:layout_height="59dp"
-                android:text="@string/double_tapping"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/DoubleSpacePeriod" />
-
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/switchOfDoubleSpacePeriod"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:checked="true"
-                android:longClickable="false"
-                android:theme="@style/BrandedSwitch2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/DoubleTapping" />
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchOfSynonyms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:longClickable="false"
+                    android:theme="@style/BrandedSwitch2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/synonyms" />
 
 
+                <TextView
+                    android:id="@+id/ShowSynonymsAfterDelay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/show_synonyms_after_delay"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/synonyms" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchOfShowSynonymsAfterDelay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:longClickable="false"
+                    android:theme="@style/BrandedSwitch2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/ShowSynonymsAfterDelay" />
+
+                <TextView
+                    android:id="@+id/DoubleSpacePeriod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/double_space_period"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ShowSynonymsAfterDelay" />
+
+                <TextView
+                    android:id="@+id/DoubleTapping"
+                    android:layout_width="285dp"
+                    android:layout_height="59dp"
+                    android:text="@string/double_tapping"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/DoubleSpacePeriod" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchOfDoubleSpacePeriod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:checked="true"
+                    android:longClickable="false"
+                    android:theme="@style/BrandedSwitch2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/DoubleTapping" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
-
-
-
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

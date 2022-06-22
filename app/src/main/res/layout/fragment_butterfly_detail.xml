@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/second_activity_fragment"
-    android:background="@color/background_of_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/background_of_layout">
 
 
     <View
@@ -18,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/back"
+        android:id="@+id/backIcon"
         android:layout_width="18dp"
         android:layout_height="18dp"
         android:layout_marginStart="13dp"
@@ -28,15 +27,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/screenTitle"
+        android:id="@+id/pageTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/vlinder"
-        android:textSize="20sp"
         android:textColor="@color/main_text_color"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/appBarView"
         app:layout_constraintEnd_toStartOf="@+id/hamburger"
-        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintStart_toEndOf="@+id/backIcon"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -70,7 +69,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/titleOfButterfly"
+            android:id="@+id/butterflyNameInput"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -82,7 +81,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/familyOfButterfly"
+            android:id="@+id/familyInput"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
@@ -91,11 +90,11 @@
             android:textColor="@color/white"
             android:textSize="11sp"
             app:layout_constraintBottom_toBottomOf="@id/view2"
-            app:layout_constraintStart_toEndOf="@+id/titleOfButterfly"
+            app:layout_constraintStart_toEndOf="@+id/butterflyNameInput"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageOfButterfly"
+            android:id="@+id/butterflyImageView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="12dp"
@@ -106,9 +105,7 @@
             app:layout_constraintDimensionRatio="12:11"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/view2">
-
-        </ImageView>
+            app:layout_constraintTop_toBottomOf="@id/view2" />
 
         <TextView
             android:id="@+id/vleugellengte"
@@ -118,8 +115,8 @@
             android:text="@string/vleugellengte"
             android:textColor="@color/main_text_color"
             android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="@+id/imageOfButterfly"
-            app:layout_constraintTop_toBottomOf="@+id/imageOfButterfly" />
+            app:layout_constraintStart_toStartOf="@+id/butterflyImageView"
+            app:layout_constraintTop_toBottomOf="@+id/butterflyImageView" />
 
         <TextView
             android:id="@+id/voorkomen"
@@ -129,11 +126,11 @@
             android:text="@string/voorkomen"
             android:textColor="@color/main_text_color"
             android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="@+id/imageOfButterfly"
+            app:layout_constraintStart_toStartOf="@+id/butterflyImageView"
             app:layout_constraintTop_toBottomOf="@+id/vleugellengte" />
 
         <TextView
-            android:id="@+id/size_of_butterfly"
+            android:id="@+id/butterflySize"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/size_of_butterfly"
@@ -146,17 +143,14 @@
             android:id="@+id/textView"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
             android:text="@string/paragraph"
             android:textColor="@color/lite_text_color"
             android:textSize="16sp"
-            android:layout_marginStart="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/vleugellengte"
             app:layout_constraintTop_toTopOf="@+id/voorkomen" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

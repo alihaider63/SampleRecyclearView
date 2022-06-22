@@ -40,7 +40,7 @@
 
         </activity>
         <activity
-            android:name=".activities.SecondActivity"
+            android:name=".activities.ButterflyDetailActivity"
             android:exported="false" />
         <activity
             android:name=".activities.MainActivity"

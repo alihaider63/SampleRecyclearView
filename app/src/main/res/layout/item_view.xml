@@ -1,99 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/item_view"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:cardElevation="3dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginBottom="8dp">
 
-    <ImageView
-        android:id="@+id/butterfly"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/butterfly7"
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/butterflyName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="-5dp"
-        android:text="@string/zwart"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@id/butterfly"
-        app:layout_constraintTop_toTopOf="@+id/butterfly" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/butterflyFamily"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-4dp"
-        android:text="@string/thymelicus_lineola"
-        android:textSize="13sp"
-        app:layout_constraintStart_toStartOf="@+id/butterflyName"
-        app:layout_constraintTop_toBottomOf="@id/butterflyName" />
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/butterflyImageViewCardView"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/minusBtn"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/button"
-        android:gravity="center"
-        android:text="@string/minus"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="@id/butterflyName"
-        app:layout_constraintTop_toBottomOf="@+id/butterflyFamily" />
+                <ImageView
+                    android:id="@+id/butterflyImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/butterfly7" />
 
-    <TextView
-        android:id="@+id/counter"
-        android:layout_width="35dp"
-        android:layout_height="30dp"
-        android:gravity="center"
-        android:text="@string/zero"
-        android:textColor="@color/text_colour"
-        app:layout_constraintStart_toEndOf="@+id/minusBtn"
-        app:layout_constraintTop_toTopOf="@+id/minusBtn" />
-
-    <Button
-        android:id="@+id/plusBtn"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:background="@drawable/button"
-        android:gravity="center"
-        android:text="@string/plus"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/counter"
-        app:layout_constraintTop_toTopOf="@+id/minusBtn" />
-
-    <Button
-        android:id="@+id/delete_Item_Btn"
-        android:layout_width="40dp"
-        android:layout_height="30dp"
-        android:background="@drawable/deletebutton"
-        android:text="@string/Delete"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="11sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/plusBtn"
-        app:layout_constraintTop_toTopOf="@+id/plusBtn" />
-
-    <ImageView
-        android:id="@+id/forward_ic"
-        android:layout_width="24dp"
-        android:layout_height="16dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/ic_forward"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/delete_Item_Btn" />
+            </com.google.android.material.card.MaterialCardView>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/butterflyName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="-5dp"
+                android:text="@string/zwart"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/menuButton"
+                app:layout_constraintStart_toEndOf="@id/butterflyImageViewCardView"
+                app:layout_constraintTop_toTopOf="@+id/butterflyImageViewCardView" />
+
+            <TextView
+                android:id="@+id/butterflyFamily"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-4dp"
+                android:text="@string/thymelicus_lineola"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toStartOf="@+id/menuButton"
+                app:layout_constraintStart_toStartOf="@+id/butterflyName"
+                app:layout_constraintTop_toBottomOf="@id/butterflyName" />
+
+            <Button
+                android:id="@+id/minusBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button"
+                android:gravity="center"
+                android:text="@string/minus"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@id/butterflyName"
+                app:layout_constraintTop_toBottomOf="@+id/butterflyFamily" />
+
+            <TextView
+                android:id="@+id/counter"
+                android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="@string/zero"
+                android:textColor="@color/text_colour"
+                app:layout_constraintStart_toEndOf="@+id/minusBtn"
+                app:layout_constraintTop_toTopOf="@+id/minusBtn" />
+
+            <Button
+                android:id="@+id/plusBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button"
+                android:gravity="center"
+                android:text="@string/plus"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@+id/counter"
+                app:layout_constraintTop_toTopOf="@+id/minusBtn" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/menuButton"
+                style="@style/Widget.CircleInAppTheme.Button.TextButton.CheckableAction"
+                android:layout_width="@dimen/min_clickable_dimension"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/content_description_more_actions"
+                app:icon="@drawable/ic_more_vert_white_24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</com.google.android.material.card.MaterialCardView>

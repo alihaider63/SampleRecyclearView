@@ -69,4 +69,6 @@
     <string name="profile_fragment">Profile Fragment</string>
     <string name="status_fragment">Status Fragment</string>
     <string name="calls_fragment">Calls Fragment</string>
+    <string name="actions">Actions</string>
+    <string name="content_description_more_actions">Actions</string>
 </resources>

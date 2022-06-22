@@ -1,91 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="15dp"
     android:gravity="center"
-    android:orientation="vertical"
-    android:layout_margin="15dp">
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="15dp"
+        android:background="@drawable/backgroundshape"
+        android:orientation="vertical"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
-        android:background="@drawable/backgroundshape"
-        android:orientation="vertical">
+        android:paddingBottom="15dp">
 
         <ImageView
             android:id="@+id/ggggg"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_gravity="center_horizontal"
-            android:scaleType="fitXY"/>
+            android:scaleType="fitXY" />
 
 
-         <TextView
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:text="@string/add_item"
-             android:textSize="19sp"
-             android:paddingStart="15dp"
-             android:paddingEnd="15dp"
-             android:paddingTop="8dp"
-             android:paddingBottom="8dp"
-             android:textStyle="bold"
-             android:layout_margin="15dp"
-             android:gravity="center"
-             android:textColor="@color/text_colour"
-             android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:paddingStart="15dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="8dp"
+            android:text="@string/add_item"
+            android:textColor="@color/text_colour"
+            android:textSize="19sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/clickImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/backgroundshape"
             android:padding="15dp"
-            android:textStyle="bold"
-            android:textSize="18sp"
             android:text="@string/clickImage"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="5dp"
             android:textColor="@color/text_colour"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
 
         <EditText
             android:id="@+id/addButterfly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/backgroundshape"
+            android:hint="@string/add_item"
             android:inputType="text"
             android:padding="15dp"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:hint="@string/add_item"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="5dp"
             android:textColor="@color/text_colour"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <EditText
-            android:textStyle="bold"
-            android:padding="15dp"
-            android:inputType="text"
-            android:background="@drawable/backgroundshape"
-            android:textSize="18sp"
             android:id="@+id/family"
-            android:hint="@string/family"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginTop="5dp"
-            android:textColor="@color/text_colour"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/backgroundshape"
+            android:hint="@string/family"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/text_colour"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>

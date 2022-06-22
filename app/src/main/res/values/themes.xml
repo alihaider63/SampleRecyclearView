@@ -1,7 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.SampleRecyclearView" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.SampleRecyclearView" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
         <!-- Primary brand color. -->
+        <item name="android:colorEdgeEffect">@color/text_colour</item>
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">#09D383</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -21,4 +22,20 @@
     </style>
 
 
+    <style name="Widget.CircleInAppTheme.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@color/circle_in_text_background_color_selector</item>
+        <item name="iconTint">@color/circle_in_text_btn_text_color_selector</item>
+        <item name="android:textColor">@color/circle_in_text_btn_text_color_selector</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="rippleColor">?attr/colorControlHighlight</item>
+
+        <item name="iconPadding">16dp</item>
+        <item name="iconSize">24dp</item>
+    </style>
+
+    <style name="Widget.CircleInAppTheme.Button.TextButton.CheckableAction">
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="iconTint">@color/circle_in_text_button_checkable_action_color</item>
+        <item name="android:textColor">@color/circle_in_text_button_checkable_action_color</item>
+    </style>
 </resources>

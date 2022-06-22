@@ -7,10 +7,10 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Butterfly(
-    var name: String? = "Ali",
-    var family: String? = "Haider",
-    @IntegerRes var butterfly: Int? = null,
-    var imagePath: String? = null,
-    var image: Bitmap? = null,
+    val butterflyName: String? = "Brush-footed",
+    val family: String? = "Nymphalidae",
+    @IntegerRes val imageRes: Int? = null,
+    val imagePath: String? = null,
+    val imageBitmap: Bitmap? = null,
     var count: Int = 0
 ) : Parcelable

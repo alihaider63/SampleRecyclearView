@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +14,7 @@
             android:layout_height="wrap_content">
 
             <View
-                android:id="@+id/app_bar_view"
+                android:id="@+id/actionBar"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
                 android:background="@color/white"
@@ -28,34 +28,32 @@
                 android:layout_height="18dp"
                 android:layout_marginStart="13dp"
                 android:src="@drawable/back2"
-                app:layout_constraintBottom_toBottomOf="@+id/app_bar_view"
+                app:layout_constraintBottom_toBottomOf="@+id/actionBar"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/screen_title"
+                android:id="@+id/screenTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/app_settings"
-                android:textSize="22sp"
                 android:layout_marginStart="80dp"
+                android:text="@string/app_settings"
                 android:textColor="@color/text_colour"
-                app:layout_constraintBottom_toBottomOf="@+id/app_bar_view"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@+id/actionBar"
                 app:layout_constraintStart_toEndOf="@+id/back"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp">
 
             <TextView
                 android:id="@+id/tone_detection"
@@ -65,7 +63,7 @@
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tap_the_keyboard"
@@ -90,10 +88,10 @@
                 android:id="@+id/auto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
                 android:text="@string/auto_correction"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:layout_marginTop="15dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tap_the_keyboard" />
 
@@ -121,10 +119,10 @@
                 android:id="@+id/autoCapitalization"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
                 android:text="@string/auto_capitalization"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:layout_marginTop="15dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tapping" />
 
@@ -162,8 +160,8 @@
                 android:id="@+id/switchOfSwipe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="false"
                 android:layout_marginTop="-10dp"
+                android:checked="false"
                 android:longClickable="false"
                 android:minHeight="48dp"
                 android:theme="@style/BrandedSwitch2"
@@ -174,9 +172,9 @@
                 android:id="@+id/predictive"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
                 android:text="@string/predictive_text"
                 android:textColor="@color/black"
-                android:layout_marginTop="35dp"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/Swipe" />
@@ -185,8 +183,8 @@
                 android:id="@+id/switchOfPredictive"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="false"
                 android:layout_marginTop="-10dp"
+                android:checked="false"
                 android:longClickable="false"
                 android:minHeight="48dp"
                 android:theme="@style/BrandedSwitch2"
@@ -197,9 +195,9 @@
                 android:id="@+id/suggest_Emojis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
                 android:text="@string/suggest_emojis"
                 android:textColor="@color/black"
-                android:layout_marginTop="35dp"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/predictive" />
@@ -208,8 +206,8 @@
                 android:id="@+id/switchOfSuggestEmojis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="false"
                 android:layout_marginTop="-10dp"
+                android:checked="false"
                 android:longClickable="false"
                 android:minHeight="48dp"
                 android:theme="@style/BrandedSwitch2"
@@ -220,9 +218,9 @@
                 android:id="@+id/synonyms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
                 android:text="@string/synonyms"
                 android:textColor="@color/black"
-                android:layout_marginTop="35dp"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/suggest_Emojis" />
@@ -231,8 +229,8 @@
                 android:id="@+id/switchOfSynonyms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="false"
                 android:layout_marginTop="-10dp"
+                android:checked="false"
                 android:longClickable="false"
                 android:minHeight="48dp"
                 android:theme="@style/BrandedSwitch2"
@@ -244,9 +242,9 @@
                 android:id="@+id/ShowSynonymsAfterDelay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
                 android:text="@string/show_synonyms_after_delay"
                 android:textColor="@color/black"
-                android:layout_marginTop="35dp"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/synonyms" />
@@ -255,8 +253,8 @@
                 android:id="@+id/switchOfShowSynonymsAfterDelay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="false"
                 android:layout_marginTop="-10dp"
+                android:checked="false"
                 android:longClickable="false"
                 android:minHeight="48dp"
                 android:theme="@style/BrandedSwitch2"
@@ -267,10 +265,10 @@
                 android:id="@+id/DoubleSpacePeriod"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
                 android:text="@string/double_space_period"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:layout_marginTop="35dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ShowSynonymsAfterDelay" />
 
@@ -297,10 +295,10 @@
                 android:id="@+id/SuggestContactNames"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
                 android:text="@string/Suggest_contact_names"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:layout_marginTop="35dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/DoubleTapping" />
 
@@ -328,17 +326,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="#86E5E4E9"
-                app:layout_constraintTop_toBottomOf="@+id/UseNames"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/UseNames" />
 
             <TextView
                 android:id="@+id/LanguagePreferences"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
                 android:text="@string/language_preference"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:layout_marginTop="15dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/line1" />
 
@@ -356,22 +354,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="#86E5E4E9"
-                app:layout_constraintTop_toBottomOf="@+id/AmericanLanguage"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/AmericanLanguage" />
 
             <TextView
                 android:id="@+id/ManagePersonalDic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:paddingBottom="25dp"
                 android:text="@string/manage_personal_dictionary"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:layout_marginTop="25dp"
-                android:paddingBottom="25dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/AmericanLanguage" />
-
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
